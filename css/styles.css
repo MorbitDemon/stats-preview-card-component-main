@@ -1,5 +1,9 @@
+*{
+  box-sizing: border-box;
+}
+
 html {
-  --color-primary-300: hsl(277, 64%, 61%); /*(accent)*/
+  --color-primary-300: hsl(277, 73%, 29%); /*(accent)*/
   --color-primary-700: hsl(244, 38%, 16%); /*(card background)*/
   --color-primary-900: hsl(233, 47%, 7%); /*(main background)*/
 
@@ -19,8 +23,10 @@ body {
 main {
   margin: 0;
   padding: 0;
-  display: grid;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -28,16 +34,35 @@ main {
   overflow: hidden;
   border-radius: 10px;
   max-width: 90%;
-  margin: auto;
+  
+}
+
+#images{
+  position: relative;
+  flex: 1.3;
 }
 
 img {
-  max-width: 100%;
-  background: var(--color-primary-300);
-  z-index: 2;
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
 
   /*To eliminate the random spacing between the img and div */
   vertical-align: middle;
+}
+
+#desktop-img{
+  display: none;
+}
+
+/*To add the color overlay on the images*/
+#color-overlay{
+  width: 100%;
+  height: 100%;
+  background: var(--color-primary-300);
+  opacity: .6;
+  z-index: 1;
+  position: absolute;
 }
 
 #item-content {
@@ -48,7 +73,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* max-width: 33.75rem; */
+  flex: 1;
 }
 
 h1 {
@@ -57,7 +82,7 @@ h1 {
 }
 
 span {
-  color: var(--color-primary-300);
+  color: hsl(277, 69%, 58%);
 }
 
 h1,
@@ -73,18 +98,58 @@ h2 {
 h2 {
   font-size: 1.5rem;
   color: var(--color-secondary-200);
+  margin-bottom: 0.5rem;
 }
 
 #benefits p {
   text-transform: uppercase;
   color: var(--color-secondary-100);
+  margin-top: 0.5rem;
 }
 
 .attribution {
-  margin-top: 5rem;
+  margin-top: 2rem;
   font-size: 1rem;
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(277, 69%, 58%);
+  text-decoration: none;
+}
+
+@media (min-width: 970px){
+  #card {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 80%;
+  }
+
+  #item-content{
+    padding: 5rem ;
+    text-align: start;
+    
+  }
+
+  h1{
+    font-size: 2.5rem;
+  }
+
+  #item-info p{
+    font-size: 1.1rem;
+  }
+
+  #benefits{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #desktop-img{
+    display: block;
+  }
+
+  #mobile-img{
+    display: none;
+  }
+
+  
 }
