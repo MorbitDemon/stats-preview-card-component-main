@@ -23,13 +23,14 @@ Users should be able to:
 - View the optimal layout depending on their device's screen size
 
 ### Screenshot
+- Screenshots were taken in the widths indicated by the style guide (1440px, 375px)
 ![Desktop](./images/desktop-screenshot.png)
 
 ![Portrait](./images/mobile-screenshot.png)
 
 ### Links
 
-- Live Site URL: [https://morbitdemon.github.io/3-column-preview-card-component-main/](https://morbitdemon.github.io/3-column-preview-card-component-main/)
+- Live Site URL: [https://morbitdemon.github.io/stats-preview-card-component-main/](https://morbitdemon.github.io/stats-preview-card-component-main/)
 
 ## My process
 - Built the HTML structure.
