@@ -34,7 +34,7 @@ Users should be able to:
 
 ## My process
 - Built the HTML structure.
-- Builded the Mobile design.
+- Buit the Mobile design.
 - Added complexity and changed layout for desktop.
 
 ### Built with
